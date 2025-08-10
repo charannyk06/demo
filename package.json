@@ -4,6 +4,11 @@
   "description": "introduction to github",
   "main": "index.js",
   "scripts": {
+    "dev": "live-server src --port=3000 --open=/index.html",
+    "build": "copyfiles -u 1 'src/**/*' dist/",
+    "start": "live-server dist --port=8080 --open=/index.html",
+    "clean": "rm -rf dist/*",
+    "build:prod": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,3 +29,4 @@
     "live-server": "^1.2.2"
   }
 }
+
