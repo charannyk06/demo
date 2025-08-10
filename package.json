@@ -1,0 +1,32 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "introduction to github",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server src --port=3000 --open=/index.html",
+    "build": "copyfiles -u 1 'src/**/*' dist/",
+    "start": "live-server dist --port=8080 --open=/index.html",
+    "clean": "rm -rf dist/*",
+    "build:prod": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charannyk06/demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/charannyk06/demo/issues"
+  },
+  "homepage": "https://github.com/charannyk06/demo#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "copyfiles": "^2.4.1",
+    "live-server": "^1.2.2"
+  }
+}
+
